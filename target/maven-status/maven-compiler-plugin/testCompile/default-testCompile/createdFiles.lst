@@ -1,0 +1,6 @@
+com\nuna\genlib\ReadExcelData.class
+com\nuna\lib\WebDriverMethods.class
+com\nuna\lib\TranslationLib.class
+com\nuna\genlib\Driver.class
+com\nuna\pages\GoogleTranslatePage.class
+com\nuna\tests\TranslateTest.class
