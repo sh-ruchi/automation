@@ -1,6 +1,7 @@
-D:\MyRepo\nuna_automation\src\test\java\com\nuna\tests\TranslateTest.java
-D:\MyRepo\nuna_automation\src\test\java\com\nuna\genlib\Driver.java
-D:\MyRepo\nuna_automation\src\test\java\com\nuna\lib\WebDriverMethods.java
-D:\MyRepo\nuna_automation\src\test\java\com\nuna\pages\GoogleTranslatePage.java
-D:\MyRepo\nuna_automation\src\test\java\com\nuna\genlib\ReadExcelData.java
-D:\MyRepo\nuna_automation\src\test\java\com\nuna\lib\TranslationLib.java
+D:\nuna\SeleniumFramework\src\test\java\com\nuna\lib\TranslationLib.java
+D:\nuna\SeleniumFramework\src\test\java\com\nuna\pages\GoogleTranslatePage.java
+D:\nuna\SeleniumFramework\src\test\java\com\nuna\genlib\ReadExcelData.java
+D:\nuna\SeleniumFramework\src\test\java\com\nuna\tests\TranslateTest.java
+D:\nuna\SeleniumFramework\src\test\java\com\nuna\genlib\Driver.java
+D:\nuna\SeleniumFramework\src\test\java\com\nuna\lib\WebDriverMethods.java
+D:\nuna\SeleniumFramework\src\test\java\com\nuna\pages\ScreenKeyboardPage.java

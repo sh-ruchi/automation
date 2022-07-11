@@ -16,6 +16,7 @@
 4. the methods related to scenario are placed in a separate file and invoked inside @test method to ensure readability
 5. Page Object Model to store the locators page-wise and at a central location .
 6. Effort has been made to make the the automation robust and efficient. 
+7. Cuurently the framework is automated to use chrome browser which can be further extended 
 
 ## steps to execute the tests 
 

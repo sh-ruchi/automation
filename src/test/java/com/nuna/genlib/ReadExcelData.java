@@ -16,6 +16,12 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+/**
+ * 
+ * @author Ruchika Sharma
+ * 
+ * class to read data from excel using Apache POI and storing Map of Map
+ */
 public class ReadExcelData {
 	
 	

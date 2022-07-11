@@ -4,7 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
+/**
+ * 
+ * @author Ruchika Sharma
+ *
+ */
 public class GoogleTranslatePage {
 
 	
@@ -30,13 +34,42 @@ public class GoogleTranslatePage {
 	@FindBy(xpath = "//textarea[@aria-label='Source text']")
 	private WebElement srcTextArea;
 	
+	@FindBy(xpath = "//textarea[@aria-label='Source text']/following-sibling::div[@jsname='lKng5e']")
+	private WebElement srcTextAreaText;
+	
+	
 	@FindBy(xpath="//span[@class='Q4iAWc']")
 	private WebElement translatedTextEle;
 	
 	@FindBy(xpath="//div[contains(@class,'ccvoYb EjH7wc')]/descendant::button[i[contains(text(),'swap_horiz')]]")
 	private WebElement swapLanguagesButton;
 	
+	@FindBy(xpath="//div[@class='DVHrxd']/descendant::button[div[@jsname='s3Eaab']]/descendant::div[contains(@class,'RLmnJb')]")
+	private WebElement clearButton;
 	
+	@FindBy(xpath = "//a[contains(@aria-label,'Show the Input Tools menu')]")
+	private WebElement inputToolButton;
+	
+	@FindBy(xpath="//a[contains(@class,'kd-inputtool')]")
+	private WebElement screenKeyboardButton;
+	
+	
+	public WebElement getScreenKeyboardButton() {
+		return screenKeyboardButton;
+	}
+
+	public WebElement getSrcTextAreaText() {
+		return srcTextAreaText;
+	}
+
+	public WebElement getInputToolButton() {
+		return inputToolButton;
+	}
+
+	public WebElement getClearButton() {
+		return clearButton;
+	}
+
 	public WebElement getSwapLanguagesButton() {
 		return swapLanguagesButton;
 	}

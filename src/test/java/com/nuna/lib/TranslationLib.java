@@ -1,8 +1,4 @@
 package com.nuna.lib;
-/*
- * @author Ruchika Sharma
- * 
- * */
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.nuna.genlib.ReadExcelData;
 import com.nuna.pages.GoogleTranslatePage;
+import com.nuna.pages.ScreenKeyboardPage;
+
+/**
+ * 
+ * @author Ruchika Sharma
+ * 
+ * class Library to Containing methods to automate the mentioned translion scenarios
+ */
 
 public class TranslationLib extends WebDriverMethods {
 
@@ -22,13 +26,16 @@ public class TranslationLib extends WebDriverMethods {
 		this.driver = driver;
 	}
 	
-	/*
-	 *  navigateToUrl(String url, String expectedPageTitle)
+	/***
+	 * 
+	 * @param url
+	 * @param expectedPageTitle
+	 * navigateToUrl(String url, String expectedPageTitle)
 	 *  i. 	opening the url 
 	 *  ii. verifying using assertions if the desired page is opened successfully 
 	 *  iii.verifying using assertions if drop down to select language is present or not
-	 *  
 	 */
+	
 	public void navigateToUrl(String url, String expectedPageTitle) {
 		
 		GoogleTranslatePage gtp = PageFactory.initElements(driver, GoogleTranslatePage.class);
@@ -80,7 +87,9 @@ public class TranslationLib extends WebDriverMethods {
 	 * @param initialText
 	 * @param translText
 	 * @throws InterruptedException
-	 * 
+	 * translateText used to select srcLang, and translang
+	 * enters initial text and verifies the taranslated text 
+	 * all the parameters are read from Excel sheet 
 	 * 
 	 */
 	public void translateText(WebDriver driver, String srcLang, String transLang, String initialText, String translText)
@@ -130,11 +139,39 @@ public class TranslationLib extends WebDriverMethods {
 		swapLanguages(initialText);
 	}
 	
+	/***
+	 * 
+	 * @param initialText
+	 * @throws InterruptedException
+	 * swapLanguages  to swap the translation languages and verifying the translated result
+	 */
 	public void swapLanguages(String initialText) throws InterruptedException {
 		GoogleTranslatePage gtp = PageFactory.initElements(driver, GoogleTranslatePage.class);
 		click(gtp.getSwapLanguagesButton());
 		Thread.sleep(2000);
 		verifyResultForEquality(gtp.getTranslatedTextEle().getText(),initialText,
 				"Translated text is incorrect. Expected " + initialText);
+	}
+	
+	/**
+	 * @throws InterruptedException **
+	 * 
+	 */
+	public void enterTextUsingOnScreenKeyboard() throws InterruptedException {
+		
+		GoogleTranslatePage gtp = PageFactory.initElements(driver, GoogleTranslatePage.class);
+		ScreenKeyboardPage skp= PageFactory.initElements(driver, ScreenKeyboardPage.class);
+		click(gtp.getClearButton());
+		click(gtp.getScreenKeyboardButton());
+		waitForElementToBePresent(driver,skp.getKeyBoardWindowTitle());
+		click(skp.getCapsButton());
+		waitForElementToBePresent(driver,skp.getUpperLetterH());
+		click(skp.getUpperLetterH());
+		waitForElementToBePresent(driver,skp.getLowerLetterI());
+		click(skp.getLowerLetterI());
+		click(skp.getCapsButton());
+		waitForElementToBePresent(driver,skp.getExclamation());
+		click(skp.getExclamation());
+		waitForSpecifiedTime(200);
 	}
 }

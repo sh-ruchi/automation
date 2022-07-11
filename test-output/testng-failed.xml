@@ -7,7 +7,7 @@
         <methods>
           <include name="afterClass"/>
           <include name="configBeforeClass"/>
-          <include name="translateTest"/>
+          <include name="onScreenKeyboardTest"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.nuna.tests.TranslateTest -->

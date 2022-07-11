@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-10T17:04:06 EDT" name="Suite" finished-at="2022-07-10T17:04:46 EDT" duration-ms="40308">
+  <suite started-at="2022-07-10T19:54:07 EDT" name="Suite" finished-at="2022-07-10T19:54:50 EDT" duration-ms="42742">
     <groups>
     </groups>
-    <test started-at="2022-07-10T17:04:06 EDT" name="Tests Execution" finished-at="2022-07-10T17:04:46 EDT" duration-ms="40308">
+    <test started-at="2022-07-10T19:54:07 EDT" name="Tests Execution" finished-at="2022-07-10T19:54:50 EDT" duration-ms="42742">
       <class name="com.nuna.tests.TranslateTest">
-        <test-method is-config="true" signature="configBeforeClass()[pri:0, instance:com.nuna.tests.TranslateTest@20d28811]" started-at="2022-07-10T17:04:06 EDT" name="configBeforeClass" finished-at="2022-07-10T17:04:09 EDT" duration-ms="3212" status="PASS">
+        <test-method is-config="true" signature="configBeforeClass()[pri:0, instance:com.nuna.tests.TranslateTest@429bffaa]" started-at="2022-07-10T19:54:07 EDT" name="configBeforeClass" finished-at="2022-07-10T19:54:10 EDT" duration-ms="3202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBeforeClass -->
-        <test-method signature="translateTest()[pri:0, instance:com.nuna.tests.TranslateTest@20d28811]" started-at="2022-07-10T17:04:09 EDT" name="translateTest" finished-at="2022-07-10T17:04:46 EDT" duration-ms="36310" status="PASS">
+        <test-method signature="translateTest()[pri:1, instance:com.nuna.tests.TranslateTest@429bffaa]" started-at="2022-07-10T19:54:10 EDT" name="translateTest" finished-at="2022-07-10T19:54:47 EDT" duration-ms="36244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- translateTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nuna.tests.TranslateTest@20d28811]" started-at="2022-07-10T17:04:46 EDT" name="afterMethod" finished-at="2022-07-10T17:04:46 EDT" duration-ms="753" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nuna.tests.TranslateTest@429bffaa]" started-at="2022-07-10T19:54:47 EDT" name="afterMethod" finished-at="2022-07-10T19:54:47 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=translateTest status=SUCCESS method=TranslateTest.translateTest()[pri:0, instance:com.nuna.tests.TranslateTest@20d28811] output={null}]]]>
+                <![CDATA[[TestResult name=translateTest status=SUCCESS method=TranslateTest.translateTest()[pri:1, instance:com.nuna.tests.TranslateTest@429bffaa] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.nuna.tests.TranslateTest@20d28811]" started-at="2022-07-10T17:04:46 EDT" name="afterClass" finished-at="2022-07-10T17:04:46 EDT" duration-ms="1" status="PASS">
+        <test-method signature="onScreenKeyboardTest()[pri:2, instance:com.nuna.tests.TranslateTest@429bffaa]" started-at="2022-07-10T19:54:47 EDT" name="onScreenKeyboardTest" finished-at="2022-07-10T19:54:49 EDT" duration-ms="2462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onScreenKeyboardTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nuna.tests.TranslateTest@429bffaa]" started-at="2022-07-10T19:54:49 EDT" name="afterMethod" finished-at="2022-07-10T19:54:49 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=onScreenKeyboardTest status=SUCCESS method=TranslateTest.onScreenKeyboardTest()[pri:2, instance:com.nuna.tests.TranslateTest@429bffaa] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.nuna.tests.TranslateTest@429bffaa]" started-at="2022-07-10T19:54:49 EDT" name="afterClass" finished-at="2022-07-10T19:54:50 EDT" duration-ms="776" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
