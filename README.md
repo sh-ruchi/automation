@@ -27,12 +27,15 @@ mvn clean install
 
 Note: 1. For your reference I have Also committed the target folder which contains 
 sure-fire report with the name "emailable-report.html"  to view the test results 
+location : nuna_automation/target/surefire-reports/
 
-
-
+![image](https://user-images.githubusercontent.com/39658431/178170240-ec9d083f-b1e9-4965-9d2e-15b4268a505f.png)
 
 2.  the screenshots folder contains the .png to show the capture screenshot usecase. So for this the testcase was deliveratley failed to verify capture screenshot 
-
+location : nuna_automation/screenshots
+![image](https://user-images.githubusercontent.com/39658431/178170300-72f76815-405e-44e9-89b8-029c38b9e295.png)
 
 *************************************************************
 PFA screenshot for the use cases mentioned in the email that have been automated  
+
+![image](https://user-images.githubusercontent.com/39658431/178170562-ae890c52-e70e-4da6-90af-b8d9e0ff7641.png)
