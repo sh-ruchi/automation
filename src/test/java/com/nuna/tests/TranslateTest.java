@@ -20,6 +20,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -92,6 +93,7 @@ public class TranslateTest {
 	@Test(priority=1)
 	public void translateTest() throws InterruptedException {
 		
+		Reporter.log("***** Test Starts ***** ");
 		System.out.println("translateTest starts ");
 		//Launch url in chrome browser and verify if the desired Page is opened or not 
 		tLib.navigateToUrl("https://translate.google.com/","Google Translate");
@@ -104,7 +106,8 @@ public class TranslateTest {
 	/***
 	 * Scenario 3: 
 	 * 	clear the input field, click "select input tool" button, 
-	 * 	select "screen keyboard" and  enter "Hi!" 
+	 * 	select "screen keyboard" and  enter any text to be typed by 
+	 *  virtual key Board  
 	 * @throws InterruptedException 
 	 */
 
@@ -113,7 +116,8 @@ public class TranslateTest {
 			
 			System.out.println("onScreenKeyboardTest starts");
 			System.out.println("Clearing the input field and entering text using on screen keyboard ");
-			tLib.enterTextUsingOnScreenKeyboard();
+			//tLib.enterTextUsingOnScreenKeyboard();
+			tLib.enterAnyTextUsingOnScreenKeyboard("bienvenidos");
 			System.out.println("onScreenKeyboardTest ends ");
 		}
 		

@@ -53,7 +53,23 @@ public class GoogleTranslatePage {
 	@FindBy(xpath="//a[contains(@class,'kd-inputtool')]")
 	private WebElement screenKeyboardButton;
 	
+	@FindBy(xpath = "//div[contains(@class,'ccvoYb EjH7wc')]/descendant::span[contains(text(),'Detect language')]")
+	private WebElement detectLanguageButton;
 	
+	@FindBy(xpath="//div[contains(@class,'ccvoYb EjH7wc')]/descendant::button[@data-language-code='auto']/following-sibling::button[@tabindex='0']")
+	private WebElement srcLangTab;
+	
+	@FindBy(xpath="		//div[contains(@class,'ccvoYb EjH7wc')]/descendant::div[contains(@jscontroller,'HwavCb')]/following-sibling::div/descendant::button[@tabindex='0']")
+	private WebElement targetLangTab;
+	
+	public WebElement getSrcLangTab() {
+		return srcLangTab;
+	}
+
+	public WebElement getTargetLangTab() {
+		return targetLangTab;
+	}
+
 	public WebElement getScreenKeyboardButton() {
 		return screenKeyboardButton;
 	}
@@ -78,6 +94,13 @@ public class GoogleTranslatePage {
 		return driver.findElement(By.xpath("//div[div/span[contains(text(),'"+text+"')]]"));
 	}
 	
+	public WebElement selectSrcLanguage(WebDriver driver, String lang) {
+		return driver.findElement(By.xpath("//div[contains(@class,'ccvoYb EjH7wc')]/descendant::div[@class='OoYv6d']/descendant::div[contains(@jsname,'rPx1uf')]/descendant::div[contains(text(),'"+lang+"')]"));
+	}
+	
+	public WebElement selectTargetLanguage(WebDriver driver, String lang) {
+		return driver.findElement(By.xpath("//div[contains(@class,'ccvoYb EjH7wc')]/descendant::div[@class='ykTHSe']/descendant::div[contains(@jsname,'rPx1uf')]/descendant::div[contains(text(),'"+lang+"')]"));
+	}
 	public WebElement getSrcTextArea() {
 		return srcTextArea;
 	}
@@ -94,6 +117,9 @@ public class GoogleTranslatePage {
 		return searchSrcLangTextBox;
 	}
 
+	public WebElement getDetectLanguageButton() {
+		return detectLanguageButton;
+	}
 
 
 	public WebElement getAutoOpenSrcLangSearch() {

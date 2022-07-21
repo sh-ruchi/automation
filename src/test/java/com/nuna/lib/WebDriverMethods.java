@@ -48,7 +48,7 @@ public class WebDriverMethods {
 	
 	
 	public void waitForSpecifiedTime(long n) throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(n);
 	}
 	
 	public void enterValue(WebElement ele,String val)
@@ -57,19 +57,19 @@ public class WebDriverMethods {
 		ele.sendKeys(val.trim());
 	}
 	
-	public void moveToElementAndClick(WebDriver driver,WebElement eleName,String errMsg)
+	public void moveToElementAndClick(WebDriver driver,WebElement eleName) throws InterruptedException
 	{
 		Actions act= new Actions(driver);
 		act.moveToElement(eleName).click().perform();
-		try
-		{
-			waitForElementToBePresent(driver,eleName);
-		}
-		catch(Exception e)
-		{
-			
-			Assert.fail(errMsg);
-		}
 		
+		waitForSpecifiedTime(200);
 	}
+	public void moveToElementAndDoubleClick(WebDriver driver,WebElement eleName) throws InterruptedException
+	{
+		Actions act= new Actions(driver);
+		act.moveToElement(eleName).doubleClick().perform();
+		
+		waitForSpecifiedTime(200);
+	}
+	
 }

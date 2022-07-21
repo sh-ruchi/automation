@@ -3,6 +3,7 @@ package com.nuna.genlib;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.ITestResult;
 /***
  * 
  * @author Ruchika Sharma
@@ -13,7 +14,6 @@ public class Driver {
 
 	public static WebDriver driver;
 	public static DesiredCapabilities capabilities=null;
-	
 	
 	public static WebDriver getDriver() throws Exception
 	{

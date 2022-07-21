@@ -1,5 +1,7 @@
 package com.nuna.pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 /**
@@ -25,6 +27,12 @@ public class ScreenKeyboardPage {
 	
 	@FindBy(xpath = "//button[@id='K49']/span[contains(text(),'!')]")
 	private WebElement exclamation;
+	
+	
+	public WebElement getLettersLowerCase(WebDriver driver, char text) {
+		return driver.findElement(By.xpath("//div[@dir='ltr']/descendant::button[span[contains(text(),'"+text+"')]]"));
+	}
+	
 	
 	public WebElement getKeyBoardWindowTitle() {
 		return keyBoardWindowTitle;
